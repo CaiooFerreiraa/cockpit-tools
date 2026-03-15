@@ -5328,6 +5328,7 @@ pub fn start_antigravity_with_args(
         if !force_new_instance {
             args.push("--reuse-window".to_string());
         }
+        args.push("--remote-debugging-port=9333".to_string());
         for arg in extra_args {
             if !arg.trim().is_empty() {
                 args.push(arg.to_string());
@@ -5373,6 +5374,7 @@ pub fn start_antigravity_with_args(
             cmd.arg(user_data_dir.trim());
         }
         cmd.arg("--reuse-window");
+        cmd.arg("--remote-debugging-port=9333");
         for arg in extra_args {
             if !arg.trim().is_empty() {
                 cmd.arg(arg);
@@ -5400,6 +5402,7 @@ pub fn start_antigravity_with_args(
             cmd.arg(user_data_dir.trim());
         }
         cmd.arg("--reuse-window");
+        cmd.arg("--remote-debugging-port=9333");
         for arg in extra_args {
             if !arg.trim().is_empty() {
                 cmd.arg(arg);
